@@ -11,15 +11,15 @@ default: &default
 
 development:
   <<: *default
-  database: api_hirer_development
+  database: RubyRailsAPI_development
   password: <%= Rails.application.secrets[:database][:password] %>
 
 test:
   <<: *default
-  database: api_hirer_test
+  database: RubyRailsAPI_test
   password: <%= Rails.application.secrets[:database][:password] %>
 
 production:
   <<: *default
-  database: api_hirer_production
+  database: RubyRailsAPI_production
   password: <%= ENV['EXERCISE_DATABASE_PASSWORD'] %>
